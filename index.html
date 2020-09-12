@@ -2,243 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
+</head>
 <body>
-    <div class="container">
-        <div class="nav-wrapper">
-            <div class="left-side">
-                <div class="nav-link-wrapper">
-                    <a href="index.html">home</a>
-                </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="about.html">about</a>
-                </div>
-            </div>
-
-            <div class="right-side">
-                <div class="brand">
-                    <div>DAVID SOZASHVILI</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-wrapper">
-
-            <div class="portfolio-items-wrapper">
-        
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/1.jpg)"></div>
-        
-                    <div class="img-text-wrapper">
-        
-                        
-        
-                        <div class="subtitle">
-        
-                            HTML
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/2.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                       
-        
-                        <div class="subtitle">
-        
-                            css
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/3.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                        
-                        <div class="subtitle">
-        
-                            jAVASCRIPT
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/4.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                       
-        
-                        <div class="subtitle">
-        
-                            AJAX
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/5.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                        
-        
-                        <div class="subtitle">
-        
-                            ANGULAR
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/6.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                       
-        
-                        <div class="subtitle">
-        
-                            BOOTSTRAP
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/7.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                        
-        
-                        <div class="subtitle">
-        
-                            REACT JS
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/8.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                       
-        
-                        <div class="subtitle">
-        
-                            JQUERY
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/9.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                       
-        
-                        <div class="subtitle">
-        
-                            PHP
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/10.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                        
-        
-                        <div class="subtitle">
-        
-                            PYTHON
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/11.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                        
-        
-                        <div class="subtitle">
-        
-                            TYPESCRIPT
-                        
-                        </div>
-        
-                    </div>
-        
-                </div>
-                <div class="portfolio-item-wrapper">
-        
-                    <div class="portfolio-img-background" style="background-image:url(images/12.jpg)"></div>        
-                    <div class="img-text-wrapper">
-        
-                                
-                        <div class="subtitle">
-                        FRAMEFORKS
-                        </div>
-        
-                    </div>
-        
-                </div>
-
-                   
-            </div>                                                                                                                                                               
-        
-        </div>
-
-    </div>
+   <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+   </div> 
+   <div class="winning-message" id="winningMessage">
+       <div data-winning-message-text></div>
+       <button id="restartButton">Restart</button>
+   </div>
 </body>
-
-<script>
-   const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
-        portfolioItems.forEach(portfolioItem => {
-        portfolioItem.addEventListener ('mouseover', () =>  {
-            portfolioItem.childNodes[1].classList.add('img-darken')
-        })
-            portfolioItem.addEventListener ('mouseout', () =>  {
-                portfolioItem.childNodes[1].classList.remove('img-darken')
-            })
-
-    });
-</script>
-
 </html>
